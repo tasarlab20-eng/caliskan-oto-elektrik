@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim & Randevu Al | Çalışkan Oto Elektrik</title>
+    <!-- Google Fonts & FontAwesome İkonları -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- DİNAMİK HEADER (JavaScript ile yüklenecek) -->
+    <div id="header-placeholder"></div>
+
+    <!-- SAYFA ÜST BANNERI -->
+    <section class="page-banner">
+        <h1>İletişim & Randevu</h1>
+        <p>Aracınızın arızası için hızlıca randevu oluşturun veya bize ulaşın</p>
+    </section>
+
+    <!-- ANA İÇERİK BÖLÜMÜ -->
+    <section class="contact-page-centered">
+        <div class="container-small">
+
+            <!-- 1. ÜST KISIM: ORTALANMIŞ ONLINE RANDEVU FORMU -->
+            <div class="appointment-form-container center-layout">
+                <h3>Online Randevu Talebi</h3>
+                <p>Lütfen bilgileri eksiksiz doldurun. "Randevu Talebini İlet" butonuna bastığınızda detaylar doğrudan
+                    WhatsApp hattımıza iletilecektir.</p>
+
+                <form id="whatsapp-appointment-form" class="appointment-form">
+                    <!-- Müşteri Bilgileri -->
+                    <div class="form-row">
+                        <div class="form-group-custom">
+                            <label><i class="fa-solid fa-user"></i> Adınız Soyadınız *</label>
+                            <input type="text" name="client_name" placeholder="Örn: Ahmet Yılmaz" required>
+                        </div>
+                        <div class="form-group-custom">
+                            <label><i class="fa-solid fa-phone"></i> Telefon Numaranız *</label>
+                            <input type="tel" name="client_phone" placeholder="Örn: 0555 XXXXXXX" required>
+                        </div>
+                    </div>
+
+                    <!-- Araç Bilgileri -->
+                    <div class="form-group-custom">
+                        <label><i class="fa-solid fa-car"></i> Araç Marka, Model & Yıl</label>
+                        <input type="text" name="client_car" placeholder="Örn: Volkswagen Golf 2018">
+                    </div>
+
+                    <!-- Tarih ve Saat Seçimi -->
+                    <div class="form-row">
+                        <div class="form-group-custom">
+                            <label><i class="fa-solid fa-calendar-days"></i> İstediğiniz Randevu Tarihi *</label>
+                            <input type="date" name="appointment_date" required>
+                        </div>
+                        <div class="form-group-custom">
+                            <label><i class="fa-solid fa-clock"></i> İstediğiniz Randevu Saati *</label>
+                            <select name="appointment_time" required>
+                                <option value="" disabled selected>Saat Seçiniz</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:30">10:30</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:30">16:30</option>
+                                <option value="18:00">18:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Arıza Detayı -->
+                    <div class="form-group-custom">
+                        <label><i class="fa-solid fa-comment-medical"></i> Şikayetiniz / Yapılacak İşlem *</label>
+                        <textarea name="client_issue" rows="4" placeholder="Aracınızdaki arızayı kısaca anlatınız..."
+                            required></textarea>
+                    </div>
+
+                    <!-- Gönder Butonu -->
+                    <button type="submit" class="btn btn-appointment-submit">
+                        <i class="fa-brands fa-whatsapp" style="margin-right: 8px; font-size: 18px;"></i> Randevu
+                        Talebini İlet
+                    </button>
+                </form>
+            </div>
+
+            <!-- 2. ALT KISIM: İLETİŞİM BİLGİLERİ VE HARİTA -->
+            <div class="contact-bottom-layout">
+
+                <!-- İletişim Kartları -->
+                <div class="contact-cards-vertical">
+                    <div class="contact-card-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h5>Servis Adresi</h5>
+                            <p>Sümer Mah. 84. Sk. No:10 Merkezefendi / Denizli</p>
+                        </div>
+                    </div>
+                    <div class="contact-card-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h5>Telefon Numarası</h5>
+                            <p><a href="tel:05464341862">0546 434 18 62</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h5>E-Posta Adresi</h5>
+                            <p>info@caliskanotoelektrik.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-card-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h5>Çalışma Saatleri</h5>
+                            <p>Pzt - Cmt: 08:30 - 19:30 (Pazar Kapalı)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dükkanı Nokta Atışı Gösteren Google Haritası -->
+                <div class="contact-map-box">
+                    <iframe
+                        src="https://maps.google.com/maps?q=%C3%87al%C4%B1%C5%9Fkan%20Oto%20Elektrik%20S%C3%BCmer%20Mahallesi%20Denizli&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DİNAMİK FOOTER (JavaScript ile yüklenecek) -->
+    <div id="footer-placeholder"></div>
+
+    <!-- ÖZEL WHATSAPP KODU (JavaScript) -->
+    <script>
+        document.getElementById("whatsapp-appointment-form").addEventListener("submit", function (e) {
+            e.preventDefault(); // Sayfanın yenilenip formun boşa gitmesini engeller
+
+            // Form içindeki doldurulan alanları yakalıyoruz
+            const name = this.elements["client_name"].value;
+            const phone = this.elements["client_phone"].value;
+            const car = this.elements["client_car"].value || "Belirtilmedi";
+            const date = this.elements["appointment_date"].value;
+            const time = this.elements["appointment_time"].value;
+            const issue = this.elements["client_issue"].value;
+
+            // Tarih bilgisini Türkiye formatına (GG/AA/YYYY) çeviriyoruz
+            const formattedDate = date.split('-').reverse().join('/');
+
+            // Çalışkan Oto Elektrik WhatsApp Numarası (Uluslararası formatta, boşluksuz)
+            const whatsappNumber = "905464341862";
+
+            // WhatsApp'a gidecek düzenli mesaj şablonu
+            const message = `🛠️ *Çalışkan Oto Elektrik - Web Randevu Talebi* 🛠️\n\n` +
+                `👤 *Müşteri:* ${name}\n` +
+                `📞 *Telefon:* ${phone}\n` +
+                `🚗 *Araç:* ${car}\n` +
+                `📅 *Tarih:* ${formattedDate}\n` +
+                `⏰ *Saat:* ${time}\n` +
+                `📝 *Arıza / Şikayet:* ${issue}`;
+
+            // Emojilerin ve satır satır metinlerin link içinde bozulmaması için encode ediyoruz
+            const encodedMessage = encodeURIComponent(message);
+
+            // WhatsApp Web ve Mobil için evrensel yönlendirme API linki
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
+
+            // Müşteriyi yeni sekmede direkt WhatsApp konuşma penceresine taşır
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
