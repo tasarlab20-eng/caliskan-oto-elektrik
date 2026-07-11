@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <li><a href="hakkımızda.html">Hakkımızda</a></li>
                 </ul>
             </nav>
-            <div class="nav-phone"><a href="tel:05464341862"><i class="fa-solid fa-phone"></i> 0546 434 18 62</a></div>
+            <div class="nav-phone"><a href="tel:05464341862"><i class="fa-solid fa-phone"></i> 0555 555 55 55</a></div>
         </div>
     </header>`;
 
