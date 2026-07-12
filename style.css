@@ -16,7 +16,7 @@
 body {
     background-color: var(--bg-dark);
     color: var(--text-white);
-    padding-top: 80px;
+    padding-top: 10px;
     /* Header yüksekliği kadar boşluk */
 }
 
@@ -46,7 +46,7 @@ header {
 
 .logo a {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 70;
     color: var(--text-white);
     text-decoration: none;
 }
